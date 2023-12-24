@@ -96,13 +96,10 @@ body {
 }
 
 footer{
-  position: fixed;
-  bottom: 20px;
   text-align: center;
   font-weight: 500;
   color: #115F54;
   width: 100%;
-  overflow: hidden;
 }
 .social_media {
   width: 100%;
