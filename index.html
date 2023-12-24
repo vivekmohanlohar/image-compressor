@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Compressor</title>
+  <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Image Compressor</h1>
+    <div class="upload-section">
+      <label for="imageInput" class="upload-label">
+        <span class="upload-icon">➕</span> Upload Image
+      </label><br>
+      <input type="file" id="imageInput" accept="image/*" class="hidden">
+      <label for="compressionInput" class="range-label">Compression Level:</label>
+      <input type="range" id="compressionInput" min="1" max="100" value="50" class="compression-range">
+      <button onclick="compressImage()" class="compress-button">Compress Image</button>
+    </div>
+    <div id="uploadDetails" class="hidden">
+      <h2>Uploaded Image Details</h2>
+      <p id="imageName"></p>
+      <p id="imageType"></p>
+      <p id="imageSize"></p>
+    </div>
+    <div id="previewContainer" class="hidden">
+      <h2 class="preview-title">Preview</h2>
+      <div class="image-box">
+        <p class="preview-label">Before Compression:</p>
+        <img id="beforeImage" alt="Before Compression" class="preview-image">
+      </div>
+      <div class="image-box">
+        <p class="preview-label">After Compression:</p>
+        <img id="afterImage" alt="After Compression" class="preview-image">
+      </div>
+      <button onclick="downloadImage()" class="download-button">Download Compressed Image</button>
+    </div>
+  </div>
+  
+    <footer>
+    Designed and Developed By <br>
+    Vivek Lohar <br><br>
+    <ul class="social_media">
+      <a href="https://vivekmohanlohar.github.io/viveklohar/" data-aos="fade-up" data-aos-offset="0" data-aos-delay="5000"><i class="fa-solid fa-globe"></i></a> &nbsp;
+      <a href="https://github.com/vivekmohanlohar" data-aos="fade-" data-aos-offset="0" data-aos-delay="5000"><i class="fa-brands fa-github"></i></a>&nbsp;
+      <a href="https://in.linkedin.com/in/vivekmohanlohar" data-aos="fade-up" data-aos-offset="0" data-aos-delay="5000"><i class="fa-brands fa-linkedin-in"></i></a>&nbsp;
+      <a href="https://www.instagram.com/vivekmohanlohar/" data-aos="fade-up" data-aos-offset="0" data-aos-delay="5000"><i class="fa-brands fa-instagram"></i></a>
+    </ul>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
